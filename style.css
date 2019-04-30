@@ -1,3 +1,31 @@
  *{
      outline: 1px red solid;
+     margin: 0;
+ }
+ body {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ .top {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+ .question {
+    width: 400px;
+    height: 60px;
+    margin: 15px;
+    background-color: gold;
+ }
+ .Suggestion {
+     width: 150px;
+     height: 40px;
+     margin: 5px auto;
+     background-color: blueviolet;
+ }
+ .thr {
+   margin-left: auto;
+   margin-right: auto;
  }
