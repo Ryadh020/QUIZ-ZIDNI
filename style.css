@@ -36,8 +36,20 @@
     margin: 5px auto;
 
     background-color: blueviolet;
+    transition: 300ms all ease;
 
     font-size: 1.4rem;
+ }
+ .true {
+   background-color: green;
+ }
+ .false {
+   background-color: red;
+ }
+ .Suggestion:hover {
+    background-color: gray;
+    color: #ffffff;
+    cursor: pointer;
  }
  .thr {
    margin-left: auto;
