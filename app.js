@@ -30,11 +30,16 @@ const suggestions = [
     ]
 ]
 
+// VARIABLES :
+let randomQ = Math.floor(Math.random()*3);
+
 // PUT THE TEXT ON :
 setTimeout(() => {
-    question.innerHTML = quiz[2];
+    question.innerHTML = quiz[randomQ];
 
-    frsSuggestion.innerHTML = suggestions[2][0];
-    secSuggestion.innerHTML = suggestions[2][1];
-    thrSuggestion.innerHTML = suggestions[2][2];
+    frsSuggestion.innerHTML = suggestions[randomQ][0];
+    secSuggestion.innerHTML = suggestions[randomQ][1];
+    thrSuggestion.innerHTML = suggestions[randomQ][2];
 }, 1000);
+
+// CHOOSE QUESTIONS :
