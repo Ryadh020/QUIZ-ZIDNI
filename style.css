@@ -14,16 +14,30 @@
     justify-content: space-around;
  }
  .question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 400px;
     height: 60px;
     margin: 15px;
+
     background-color: gold;
+
+    font-size: 1.4rem;
  }
  .Suggestion {
-     width: 150px;
-     height: 40px;
-     margin: 5px auto;
-     background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 40px;
+    margin: 5px auto;
+
+    background-color: blueviolet;
+
+    font-size: 1.4rem;
  }
  .thr {
    margin-left: auto;
