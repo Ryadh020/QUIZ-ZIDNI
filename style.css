@@ -4,16 +4,18 @@
      box-sizing: border-box;
  }
  body {
+     height: 100vh;
      display: flex;
      flex-direction: column;
-     justify-content: center;
      align-items: center;
+     padding-top: 350px;
 
-     
+     background-image: url("images/zidni.jpg");  
+     background-repeat: no-repeat;
+     background-size: cover;   
  }
  main {
     width: 900px;
-    background-image: url("images/zidni.jpg");
  }
  .top {
     display:flex;
