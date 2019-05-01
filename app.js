@@ -5,6 +5,13 @@ const frsSuggestion = document.querySelector("#frsSuggestion");
 const secSuggestion = document.querySelector("#secSuggestion");
 const thrSuggestion = document.querySelector("#thrSuggestion");
 
+// LOAD SOUNDS :
+
+let tRuE = new Audio();
+tRuE.src = "sounds/true.mp3";
+
+let fAlSe = new Audio();
+fAlSe.src = "sounds/false.mp3";
 // QUIZ'S : 
 const quiz = [
         a = "1 + 1",
@@ -33,22 +40,6 @@ const suggestions = [
 // VARIABLES :
 let randomQ = 0;
 
-/*
-// PICK FIRST QUESTION :
-
-function pickFirst() {
-    setTimeout(() => {
-        question.innerHTML = quiz[0];
-
-        frsSuggestion.innerHTML = suggestions[0][0][0];
-        secSuggestion.innerHTML = suggestions[0][1][0];
-        thrSuggestion.innerHTML = suggestions[0][2][0];
-
-    }, 100);
-}
-pickFirst()
-*/
-
 // PICK QUESTIONS :
 function pickSuestion(rand) {
         setTimeout(() => {
@@ -69,57 +60,73 @@ question.addEventListener("click",()=> {
 // CHOOSE A SUGGESTION :
 frsSuggestion.addEventListener("click",()=> {
 
+    setTimeout(()=>{
     if(suggestions[randomQ][0][1] === true) {
-        frsSuggestion.style.backgroundColor = "green";
+        frsSuggestion.style.backgroundImage = 'url(images/true.png)';
+        tRuE.play();
     }else {
-        frsSuggestion.style.backgroundColor = "red";
+        frsSuggestion.style.backgroundImage = 'url(images/fals.png)';
+        fAlSe.play();
     }
-    randomQ++;
-    pickSuestion(randomQ);
+    },1000)
 
+    setTimeout(()=>{
+        frsSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
+        randomQ++;
+        pickSuestion(randomQ);
+    },2000)
+    
 
     if(randomQ === quiz.length) {
-        randomQ = 0;
+        pickSuestion(0);
     }
 
 })
 
 secSuggestion.addEventListener("click",()=> {
 
+    setTimeout(()=>{
     if(suggestions[randomQ][1][1] === true) {
-        secSuggestion.style.backgroundColor = "green";
+        secSuggestion.style.backgroundImage = 'url(images/true.png)';
+        tRuE.play();
     }else {
-        secSuggestion.style.backgroundColor = "red";
+        secSuggestion.style.backgroundImage = 'url(images/fals.png)';
+        fAlSe.play();
     }
-    randomQ++;
-    pickSuestion(randomQ);
+    },1000)
 
+    setTimeout(()=>{
+        secSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
+        randomQ++;
+        pickSuestion(randomQ);
+    },2000)
 
     if(randomQ === quiz.length) {
-        randomQ = 0;
+        pickSuestion(0);
     }
 
 })
 
 thrSuggestion.addEventListener("click",()=> {
 
+    setTimeout(()=>{
     if(suggestions[randomQ][2][1] === true) {
-        thrSuggestion.style.backgroundColor = "green";
+        thrSuggestion.style.backgroundImage = 'url(images/true.png)';
+        tRuE.play();
     }else {
-        thrSuggestion.style.backgroundColor = "red";
+        thrSuggestion.style.backgroundImage = 'url(images/fals.png)';
+        fAlSe.play();
     }
-    randomQ++;
-    pickSuestion(randomQ);
+    },1000)
 
+    setTimeout(()=>{
+        thrSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
+        randomQ++;
+        pickSuestion(randomQ);
+    },2000)
 
     if(randomQ === quiz.length) {
-        randomQ = 0;
+        pickSuestion(0);
     }
 
 })
-/*
-const frsSuggestion = document.querySelector("#frsSuggestion");
-const secSuggestion = document.querySelector("#secSuggestion");
-const thrSuggestion = document.querySelector("#thrSuggestion");
-
-*/

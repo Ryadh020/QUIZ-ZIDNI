@@ -1,12 +1,19 @@
  *{
      outline: 1px red solid;
      margin: 0;
+     box-sizing: border-box;
  }
  body {
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
+
+     
+ }
+ main {
+    width: 900px;
+    background-image: url("images/zidni.jpg");
  }
  .top {
     display:flex;
@@ -18,40 +25,43 @@
     justify-content: center;
     align-items: center;
 
-    width: 400px;
-    height: 60px;
+    width: 820px;
+    height: 98px;
     margin: 15px;
 
-    background-color: gold;
+    background-image: url("images/question.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
 
     font-size: 1.4rem;
+ }
+ .question:hover {
+    cursor: pointer;
  }
  .Suggestion {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 170px;
-    height: 40px;
+    width: 300px;
+    height: 60px;
     margin: 5px auto;
 
-    background-color: blueviolet;
+    background-image: url("images/suggestion.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
     transition: 300ms all ease;
 
     font-size: 1.4rem;
  }
- .true {
-   background-color: green;
- }
- .false {
-   background-color: red;
- }
+
  .Suggestion:hover {
-    background-color: gray;
-    color: #ffffff;
+    opacity: 0.9;
     cursor: pointer;
  }
- .thr {
+#thrSuggestion {
    margin-left: auto;
    margin-right: auto;
  }
