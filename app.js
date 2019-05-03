@@ -107,11 +107,11 @@ function chooseTrueToo(num,suggestion) {
 
 // RUN IT :
 question.addEventListener("click",()=> {
-    /*first.play();*/
+    first.play();
     setTimeout(()=> {
         pickSuestion(0);
         questionNumber.innerHTML = quiz[0][1];
-    },/*10000*/);
+    },10000);
     
 })
 
