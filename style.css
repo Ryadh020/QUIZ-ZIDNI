@@ -20,22 +20,18 @@
     margin-bottom: 15px;
     border-radius: 5px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     background-color: #02155e;
     border: 1px rgb(224, 193, 14) solid;
     box-shadow: #02155e 0px 0px 3px 3px;
  }
  .loading {
     float: left;
-    width: 90%;
+    width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 5px;
 
     background-color: rgb(224, 193, 14);
-    transition: all 200ms ease;
+    transition: all 500ms ease;
  }
  header {
    width: 155px;

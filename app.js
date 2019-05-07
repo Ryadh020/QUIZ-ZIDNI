@@ -7,6 +7,9 @@ const frsSuggestion = document.querySelector("#frsSuggestion");
 const secSuggestion = document.querySelector("#secSuggestion");
 const thrSuggestion = document.querySelector("#thrSuggestion");
 
+/* loading bar */
+let loadingBar = document.querySelector(".loading");
+
 // LOAD SOUNDS :
 let first = new Audio();
 first.src = "sounds/first-question.mp3";
@@ -70,6 +73,22 @@ const suggestions = [
 
 // VARIABLES :
 let randomQ = 0;
+let barWidth =100;
+
+// LOAD /
+
+function loading(widit) {
+    loadingBar.style.width = `${widit}%`;
+}
+
+setInterval(()=>{
+    loading(barWidth);
+    barWidth -= 1;
+},200)
+
+/*
+loading(barWidth);
+*/
 
 // PICK QUESTIONS & QUESTION NUMBER & SUGGESTIONS:
 function pickSuestion(rand) {
