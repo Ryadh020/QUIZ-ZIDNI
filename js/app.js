@@ -1,16 +1,25 @@
-// GET IN THE DOM :
+// GET IN THE DOM /////////////////////////////////////////////
+    /* intro page*/
+ /*language button*/ 
+const languages = document.getElementById("lang");
+
+
+    /* main page*/
+/* the number of question section */
 const questionNumber = document.querySelector("header");
 
-const question = document.querySelector("#question");
+let question = document.querySelector("#question");
 
+/* loading bar */
+let lOaDiNgBaR = document.querySelector(".loading-bar");
+let loadingBar = document.querySelector(".loading");
+
+/* suggestions buttons */
 const frsSuggestion = document.querySelector("#frsSuggestion");
 const secSuggestion = document.querySelector("#secSuggestion");
 const thrSuggestion = document.querySelector("#thrSuggestion");
 
-/* loading bar */
-let loadingBar = document.querySelector(".loading");
-
-// LOAD SOUNDS :
+// LOAD SOUNDS /////////////////////////////////////////////////
 let first = new Audio();
 first.src = "sounds/first-question.mp3";
 
@@ -22,18 +31,15 @@ tRuE.src = "sounds/true.mp3";
 
 let fAlSe = new Audio();
 fAlSe.src = "sounds/false.mp3";
-// QUIZ'S : 
-const quiz = [
-    [a = "سورة سمعها النجاشي ملك الحبشة فاضت لها دموعه فما هي ؟", number = "السؤال الاول"],
-    [b = "ما هي المادة المسئولة عن تلون جسم الإنسان بالألوان الغامضة ؟", number = "السؤال الثاني"],
-    [c = "من هي الدوله الوحيدة في العالم التي ليس لديها جيش ؟", number = "السؤال الثالث"],
-    [d = "من هو مخترع الطائرة ذات المحرك ؟", number = "السؤال الرابع"],
-    [e = "ماعدد الايام الذي خلقت فيه الارض والسماء ؟", number = "السؤال الخامس"],
-    [f = "ماهو النهر الوحيد في العالم ينبع من الجنوب إلى الشمال ؟", number = "السؤال السابع"],
-    [g = "ماهو علم السيتولوجيا ؟", number = "السؤال الثامن"]       
-]
 
-const suggestions = [
+// VARIABLES /////////////////////////////////////////////////
+let randomQ = 0;
+let barWidth =100;
+
+
+///////////////////// QUIZ'S ////////////////////////////////// 
+let quiz;
+let suggestions = [
     [
         [a = "سورة مريم", validity = true],
         [b = "سورة الاخلاص", validity = false],
@@ -71,24 +77,57 @@ const suggestions = [
     ]
 ]
 
-// VARIABLES :
-let randomQ = 0;
-let barWidth =100;
+/////////////////////////////////////////////////////////////////// INTRO PAGE  /////////////////////////////////////////////////////////////////
 
-// LOAD /
+// SELECT LANGUAGE OF THE QUIZ /////////////////////////////////////
+for(let i=0; i<=5; i++) {
+    languages.childNodes[i].addEventListener("change",()=> {
+        switch(i) {
+            case 1:
+            quiz = [
+                [a = "سورة سمعها النجاشي ملك الحبشة فاضت لها دموعه فما هي ؟", number = "السؤال الاول"],
+                [b = "ما هي المادة المسئولة عن تلون جسم الإنسان بالألوان الغامضة ؟", number = "السؤال الثاني"],
+                [c = "من هي الدوله الوحيدة في العالم التي ليس لديها جيش ؟", number = "السؤال الثالث"],
+                [d = "من هو مخترع الطائرة ذات المحرك ؟", number = "السؤال الرابع"],
+                [e = "ماعدد الايام الذي خلقت فيه الارض والسماء ؟", number = "السؤال الخامس"],
+                [f = "ماهو النهر الوحيد في العالم ينبع من الجنوب إلى الشمال ؟", number = "السؤال السابع"],
+                [g = "ماهو علم السيتولوجيا ؟", number = "السؤال الثامن"]       
+            ]
+            break;
 
-function loading(widit) {
-    loadingBar.style.width = `${widit}%`;
+            case 3:
+            quiz = [
+                [a = "fdfdfdfdfdfdfdfdf ؟", number = "السؤال الاول"],
+                [b = "ما هdfdfdfdfdfdfة ؟", number = "السؤال الثاني"],
+                [c = "مdfdfdfdfdfdfdfdfdfd", number = "السؤال الثالث"],
+                [d = "مdfdfdfdfdfdfdfdf", number = "السؤال الرابع"],
+                [e = "ماdfdfdfdfdfdfdfd", number = "السؤال الخامس"],
+                [f = "مdfdfdfdfdffdfdf", number = "السؤال السابع"],
+                [g = "مdfdfdfdfffdff", number = "السؤال الثامن"]       
+            ]
+            break;
+
+            case 5:
+            console.log("english");
+            break;
+            
+        }
+    })
 }
 
-setInterval(()=>{
-    loading(barWidth);
-    barWidth -= 1;
-},200)
+// LOADING BAR///////////////////////////////////////////////////////////
 
-/*
-loading(barWidth);
-*/
+function loading() {
+    lOaDiNgBaR.style.visibility = "visible";
+    setInterval(()=>{
+        loadingBar.style.width = `${barWidth}%`;
+        barWidth -= 1;
+        if(barWidth === -5) {
+            lOaDiNgBaR.style.visibility = "hidden";
+            barWidth =100;
+        }
+    },200)
+}
 
 // PICK QUESTIONS & QUESTION NUMBER & SUGGESTIONS:
 function pickSuestion(rand) {
@@ -128,6 +167,7 @@ function chooseTrueToo(num,suggestion) {
 question.addEventListener("click",()=> {
     first.play();
     setTimeout(()=> {
+        loading()
         pickSuestion(0);
         questionNumber.innerHTML = quiz[0][1];
     },10000);
@@ -138,6 +178,9 @@ question.addEventListener("click",()=> {
 // CHOOSE A SUGGESTION :
 frsSuggestion.addEventListener("click",()=> {
     stress.play();
+    lOaDiNgBaR.style.visibility = "hidden";
+    loadingBar.style.visibility = "hidden";
+    barWidth =100;
     frsSuggestion.style.backgroundImage = 'url(images/stress.png)';
     setTimeout(()=>{
     if(suggestions[randomQ][0][1] === true) {
@@ -158,6 +201,7 @@ frsSuggestion.addEventListener("click",()=> {
     },13000)
 
     setTimeout(()=>{
+        loading()
         frsSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
         secSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
         thrSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
@@ -173,6 +217,9 @@ frsSuggestion.addEventListener("click",()=> {
 
 secSuggestion.addEventListener("click",()=> {
     stress.play();
+    lOaDiNgBaR.style.visibility = "hidden";
+    loadingBar.style.visibility = "hidden";
+    barWidth =100;
     secSuggestion.style.backgroundImage = 'url(images/stress.png)';
     setTimeout(()=>{
     if(suggestions[randomQ][1][1] === true) {
@@ -194,6 +241,7 @@ secSuggestion.addEventListener("click",()=> {
     },13000)
 
     setTimeout(()=>{
+        loading()
         frsSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
         secSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
         thrSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
@@ -209,6 +257,9 @@ secSuggestion.addEventListener("click",()=> {
 
 thrSuggestion.addEventListener("click",()=> {
     stress.play();
+    lOaDiNgBaR.style.visibility = "hidden";
+    loadingBar.style.visibility = "hidden";
+    barWidth =100;
     thrSuggestion.style.backgroundImage = 'url(images/stress.png)';
     setTimeout(()=>{
     if(suggestions[randomQ][2][1] === true) {
@@ -230,6 +281,7 @@ thrSuggestion.addEventListener("click",()=> {
     },13000)
 
     setTimeout(()=>{
+        loading()
         frsSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
         secSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
         thrSuggestion.style.backgroundImage = 'url(images/suggestion.png)';
@@ -242,3 +294,17 @@ thrSuggestion.addEventListener("click",()=> {
     }
 
 })
+
+let one = "related";
+
+localStorage.setItem("REALATED", one);
+
+
+let second = localStorage.getItem("related");
+
+
+let za = document.querySelector("h3");
+
+
+
+za.textContent = second;

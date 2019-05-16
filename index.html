@@ -9,22 +9,55 @@
      <link href="https://fonts.googleapis.com/css?family=Lateef|Reem+Kufi" rel="stylesheet">
  </head>
  <body>
+<div class="intro">
+    <form class="inforInput">
+        <label for="name">ادخل اسمك هنا</label> 
+        <input type="text" placeholder="فلان" class="name" name="name">
+        <hr width="200">
+        <label for="lang">اختراللغة</label> 
+        <div class="languages" name="lang" id="lang"> 
+            <div class="language">
+                <input type="radio" name="langue" id="" value="العربية" id="arabic" class="radio">
+                <label for="langue" class="lang">العربية</label>
+            </div>
+             <div class="language">
+                <input type="radio" name="langue" id="french" value="الفرنسية" class="radio">
+                <label for="langue" class="lang">الفرنسية</label>
+            </div>
+            <div class="language">
+                <input type="radio" name="langue" id="english" value="الانجليزية" class="radio">
+                <label for="langue" class="lang">الانجليزية</label>
+            </div>
+        </div>
+        <hr width="200">
+        <label for="filed">اختر مجال</label> 
+        <select name="fields" id="">
+            <option value="">الرياضة</option>
+            <option value="">جغرافيا</option>
+            <option value="">تاريخ</option>
+            <option value="">اسلام</option>
+        </select>
+        <hr width="200">
+        <input type="submit" value="دخول" class="submit">
+    </form>
+</div>
+<div class="game">
     <div class="loading-bar">
         <div class="loading"></div>
     </div>
-     <header class="question-number"></header>
-     <main>
-         <div class="question" id="question">اظغط للبدا</div>
-         <div class="suggestions"></div>
-            <div class="top">
-                <div class="Suggestion" id="frsSuggestion"></div>
-                <div class="Suggestion" id="secSuggestion"></div>
-            </div>
-            <div class="Suggestion" id="thrSuggestion"></div>
-         </div>
-         
-     </main>
-     <p>this game is not original and not for commercial purpose, all rights belong to Echourok TV Foundation</p>
-    <script src="app.js"></script>
+    <header class="question-number"></header>
+    <main>
+        <div class="question" id="question">اظغط للبدا</div>
+        <div class="suggestions"></div>
+        <div class="top">
+            <div class="Suggestion" id="frsSuggestion"></div>
+            <div class="Suggestion" id="secSuggestion"></div>
+        </div>
+        <div class="Suggestion" id="thrSuggestion"></div>                       
+    </main>
+    <p>this game is not original and not for commercial purpose, all rights belong to Echourok TV Foundation</p>
+    <h3 style="color:aliceblue;">didnt work</h3>
+</div>
+<script src="js/app.js"></script> 
  </body>
  </html>
