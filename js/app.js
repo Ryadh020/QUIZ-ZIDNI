@@ -3,8 +3,14 @@
  /*language button*/ 
 const languages = document.getElementById("lang");
 
+/*fildes form*/
+const fields = document.getElementById("fields");
 
-    /* main page*/
+
+    /* game page*/
+/* the main page */
+const gamePagessss = document.querySelector(".game");
+
 /* the number of question section */
 const questionNumber = document.querySelector("header");
 
@@ -39,43 +45,7 @@ let barWidth =100;
 
 ///////////////////// QUIZ'S ////////////////////////////////// 
 let quiz;
-let suggestions = [
-    [
-        [a = "سورة مريم", validity = true],
-        [b = "سورة الاخلاص", validity = false],
-        [c = "سورة الفاتحة", validity = false]
-    ],
-    [
-        [a = "قرنية العين", validity = false],
-        [b = "الخلايا العصبية", validity = false],
-        [c = " هي مادة الميلانين", validity = true]
-    ],
-    [
-        [a = "سويسرا", validity = true],
-        [b = "كندا ", validity = false],
-        [c = "السودان ", validity = false]
-    ],
-    [
-        [a = "الاخوين رايت", validity = true],
-        [b = "ابراهام طليطله", validity = false],
-        [c = "جورج برنادشو", validity = false]
-    ],
-    [
-        [a = " سبعة ايام", validity = false],
-        [b = " عشرة ايام", validity = false],
-        [c = " سته ايام", validity = true]
-    ],
-    [
-        [a = "الدانوب", validity = false],
-        [b = "النيل ", validity = true],
-        [c = "الامازون", validity = false]
-    ],
-    [
-        [a = "علم الخلايا", validity = true],
-        [b = "علم الاجناس", validity = false],
-        [c = "علم المكان", validity = false]
-    ]
-]
+let suggestions;
 
 /////////////////////////////////////////////////////////////////// INTRO PAGE  /////////////////////////////////////////////////////////////////
 
@@ -84,6 +54,7 @@ for(let i=0; i<=5; i++) {
     languages.childNodes[i].addEventListener("change",()=> {
         switch(i) {
             case 1:
+            console.log("arabic");
             quiz = [
                 [a = "سورة سمعها النجاشي ملك الحبشة فاضت لها دموعه فما هي ؟", number = "السؤال الاول"],
                 [b = "ما هي المادة المسئولة عن تلون جسم الإنسان بالألوان الغامضة ؟", number = "السؤال الثاني"],
@@ -93,28 +64,255 @@ for(let i=0; i<=5; i++) {
                 [f = "ماهو النهر الوحيد في العالم ينبع من الجنوب إلى الشمال ؟", number = "السؤال السابع"],
                 [g = "ماهو علم السيتولوجيا ؟", number = "السؤال الثامن"]       
             ]
-            break;
-
-            case 3:
-            quiz = [
-                [a = "fdfdfdfdfdfdfdfdf ؟", number = "السؤال الاول"],
-                [b = "ما هdfdfdfdfdfdfة ؟", number = "السؤال الثاني"],
-                [c = "مdfdfdfdfdfdfdfdfdfd", number = "السؤال الثالث"],
-                [d = "مdfdfdfdfdfdfdfdf", number = "السؤال الرابع"],
-                [e = "ماdfdfdfdfdfdfdfd", number = "السؤال الخامس"],
-                [f = "مdfdfdfdfdffdfdf", number = "السؤال السابع"],
-                [g = "مdfdfdfdfffdff", number = "السؤال الثامن"]       
+            suggestions = [
+                [
+                    [a = "سورة مريم", validity = true],
+                    [b = "سورة الاخلاص", validity = false],
+                    [c = "سورة الفاتحة", validity = false]
+                ],
+                [
+                    [a = "قرنية العين", validity = false],
+                    [b = "الخلايا العصبية", validity = false],
+                    [c = " هي مادة الميلانين", validity = true]
+                ],
+                [
+                    [a = "سويسرا", validity = true],
+                    [b = "كندا ", validity = false],
+                    [c = "السودان ", validity = false]
+                ],
+                [
+                    [a = "الاخوين رايت", validity = true],
+                    [b = "ابراهام طليطله", validity = false],
+                    [c = "جورج برنادشو", validity = false]
+                ],
+                [
+                    [a = " سبعة ايام", validity = false],
+                    [b = " عشرة ايام", validity = false],
+                    [c = " سته ايام", validity = true]
+                ],
+                [
+                    [a = "الدانوب", validity = false],
+                    [b = "النيل ", validity = true],
+                    [c = "الامازون", validity = false]
+                ],
+                [
+                    [a = "علم الخلايا", validity = true],
+                    [b = "علم الاجناس", validity = false],
+                    [c = "علم المكان", validity = false]
+                ]
             ]
             break;
 
+            case 3:
+            console.log("french");
+            quiz = [
+                [a = "", number = ""],
+                [b = "", number = ""],
+                [c = "", number = ""],
+                [d = "", number = ""],
+                [e = "", number = ""],
+                [f = "", number = ""],
+                [g = "", number = ""]       
+            ]
+            suggestions = [
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ]
+            ]
+            break;
+            
             case 5:
             console.log("english");
+            // SELECT THE FIELD ////////////////////////////////////////////////
+            fields.addEventListener("change",(ev)=> {
+                if(ev.target.value === "الرياضة") {
+                    console.log("الرياضة"); 
+                    quiz = [
+                        [a = "What sport is played at Wimbledon? ", number = "First question"],
+                        [b = " In which city were the 2000 Summer Olympic Games held?", number = "Second question"],
+                        [c = "What country does the soccer player Wayne Rooney come from?", number = "Third question"],
+                        [d = " In which sport was Muhammad Ali the world champion? ", number = "Fourth question"],
+                        [e = "How many bases are there on a baseball field?", number = "Fifth question"],
+                        [f = " In what country were the 2010 Winter Olympic Games held?", number = "Sixth question"],
+                        [g = "What sport do the Los Angeles Lakers play?", number = "Seventh question"]       
+                    ]
+                    suggestions = [
+                        [
+                            [a = "Tennis", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "Sydney", validity = true],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "England", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = false],
+                            [c = "Boxing", validity = true]
+                        ],
+                        [
+                            [a = "4", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "Canada", validity = true],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = false],
+                            [c = "Basketball", validity = true]
+                        ]
+                    ]
+                }else if(ev.target.value === "جغرافيا") {
+                    console.log("جغرافيا");
+                    quiz = [
+                        [a = "Koalas and kangaroos are found in", number = "First question"],
+                        [b = "The Sphinx is found in ", number = "Second question"],
+                        [c = " The Statue of Liberty is found in", number = "Third question"],
+                        [d = "The Parthenon is found in ", number = "Fourth question"],
+                        [e = "Kiwi birds are found in ", number = "Fifth question"],
+                        [f = "Stonehenge is found in ", number = "Sixth question"],
+                        [g = "The Taj Mahal is found in ", number = "Seventh question"]       
+                    ]
+                    suggestions = [
+                        [
+                            [a = "Australia", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "Egypt", validity = true],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "USA", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = false],
+                            [c = "Greece", validity = true]
+                        ],
+                        [
+                            [a = "New Zealand.", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "England", validity = true],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = false],
+                            [c = "India", validity = true]
+                        ]
+                    ]
+                }else if(ev.target.value === "تاريخ") {
+                    console.log("تاريخ");
+                }else if(ev.target.value === "اسلام") {
+                    console.log("اسلام");
+                }
+            })
+            quiz = [
+                [a = "", number = "First question"],
+                [b = "", number = "Second question"],
+                [c = "", number = "Third question"],
+                [d = "", number = "Fourth question"],
+                [e = "", number = "Fifth question"],
+                [f = "", number = "Sixth question"],
+                [g = "", number = "Seventh question"]       
+            ]
+            suggestions = [
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = false],
+                    [b = "", validity = true],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = false],
+                    [b = "", validity = false],
+                    [c = "", validity = true]
+                ],
+                [
+                    [a = "", validity = true],
+                    [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = false],
+                    [b = "", validity = true],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = false],
+                    [b = "", validity = false],
+                    [c = "", validity = true]
+                ]
+            ]
             break;
             
         }
     })
 }
 
+
+ 
 // LOADING BAR///////////////////////////////////////////////////////////
 
 function loading() {
