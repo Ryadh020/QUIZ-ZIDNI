@@ -14,15 +14,6 @@
         <label for="name">ادخل اسمك هنا</label> 
         <input type="text" placeholder="فلان" class="name" name="name">
         <hr width="200">
-        <label for="filed">اختر مجال</label> 
-        <select name="fields" id="fields">
-                <option value="" name="field"></option>
-            <option value="الرياضة" name="field">الرياضة</option>
-            <option value="جغرافيا" name="field">جغرافيا</option>
-            <option value="تاريخ" name="field">تاريخ</option>
-            <option value="اسلام" name="field">اسلام</option>
-        </select>
-        <hr width="200">
         <label for="lang">اختراللغة</label> 
         <div class="languages" name="lang" id="lang"> 
             <div class="language">
@@ -39,7 +30,16 @@
             </div>
         </div>
         <hr width="200">
-        <input type="submit" value="دخول" class="submit">
+        <label for="filed">اختر مجال</label> 
+        <select name="fields" id="fields">
+                <option value="" name="field"></option>
+            <option value="الرياضة" name="field">الرياضة</option>
+            <option value="جغرافيا" name="field">جغرافيا</option>
+            <option value="تاريخ" name="field">تاريخ</option>
+            <option value="اسلام" name="field">اسلام</option>
+        </select>
+        <hr width="200">
+        <input type="button" value="دخول" class="submit">
     </form>
 </div>
 <div class="game">
@@ -48,7 +48,7 @@
     </div>
     <header class="question-number"></header>
     <main>
-        <div class="question" id="question">اظغط للبدا</div>
+        <div class="question" id="question">ابدا</div>
         <div class="suggestions"></div>
         <div class="top">
             <div class="Suggestion" id="frsSuggestion"></div>

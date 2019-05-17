@@ -7,7 +7,7 @@ const languages = document.getElementById("lang");
 const fields = document.getElementById("fields");
 
  /*submitt button*/ 
- const languages = document.querySelector(".submit");
+ const submitButton = document.querySelector(".submit");
 
 
     /* game page*/
@@ -315,7 +315,14 @@ for(let i=0; i<=5; i++) {
     })
 }
 
+// SUBMIT //////////////////////////////////////////////////////////////
+submitButton.addEventListener("click",(ev)=> {
+    gamePagessss.style.top = "0";
 
+    console.log(5);
+    
+
+})
  
 // LOADING BAR///////////////////////////////////////////////////////////
 
