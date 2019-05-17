@@ -6,6 +6,9 @@ const languages = document.getElementById("lang");
 /*fildes form*/
 const fields = document.getElementById("fields");
 
+ /*submitt button*/ 
+ const languages = document.querySelector(".submit");
+
 
     /* game page*/
 /* the main page */
@@ -104,6 +107,7 @@ for(let i=0; i<=5; i++) {
             break;
 
             case 3:
+            alert("this language is not added yet");
             console.log("french");
             quiz = [
                 [a = "", number = ""],
@@ -171,37 +175,37 @@ for(let i=0; i<=5; i++) {
                     suggestions = [
                         [
                             [a = "Tennis", validity = true],
-                            [b = "", validity = false],
-                            [c = "", validity = false]
+                            [b = "Football", validity = false],
+                            [c = "Baseball", validity = false]
                         ],
                         [
-                            [a = "", validity = false],
+                            [a = "Jakarta", validity = false],
                             [b = "Sydney", validity = true],
-                            [c = "", validity = false]
+                            [c = "Oman", validity = false]
                         ],
                         [
                             [a = "England", validity = true],
-                            [b = "", validity = false],
-                            [c = "", validity = false]
+                            [b = "Finland", validity = false],
+                            [c = "France", validity = false]
                         ],
                         [
-                            [a = "", validity = false],
-                            [b = "", validity = false],
+                            [a = "Powr-lifting", validity = false],
+                            [b = "Swimming", validity = false],
                             [c = "Boxing", validity = true]
                         ],
                         [
                             [a = "4", validity = true],
-                            [b = "", validity = false],
-                            [c = "", validity = false]
+                            [b = "5", validity = false],
+                            [c = "7", validity = false]
                         ],
                         [
-                            [a = "", validity = false],
+                            [a = "Norway", validity = false],
                             [b = "Canada", validity = true],
-                            [c = "", validity = false]
+                            [c = "Brazil", validity = false]
                         ],
                         [
-                            [a = "", validity = false],
-                            [b = "", validity = false],
+                            [a = "Rugby", validity = false],
+                            [b = "Baseball", validity = false],
                             [c = "Basketball", validity = true]
                         ]
                     ]
@@ -219,37 +223,37 @@ for(let i=0; i<=5; i++) {
                     suggestions = [
                         [
                             [a = "Australia", validity = true],
-                            [b = "", validity = false],
-                            [c = "", validity = false]
+                            [b = "South-africa", validity = false],
+                            [c = "USA", validity = false]
                         ],
                         [
-                            [a = "", validity = false],
+                            [a = "Greec", validity = false],
                             [b = "Egypt", validity = true],
-                            [c = "", validity = false]
+                            [c = "Algeria", validity = false]
                         ],
                         [
                             [a = "USA", validity = true],
-                            [b = "", validity = false],
-                            [c = "", validity = false]
+                            [b = "France", validity = false],
+                            [c = "Moroco", validity = false]
                         ],
                         [
-                            [a = "", validity = false],
-                            [b = "", validity = false],
+                            [a = "Russia", validity = false],
+                            [b = "Portugal", validity = false],
                             [c = "Greece", validity = true]
                         ],
                         [
                             [a = "New Zealand.", validity = true],
-                            [b = "", validity = false],
-                            [c = "", validity = false]
+                            [b = "Austria", validity = false],
+                            [c = "Lebnon", validity = false]
                         ],
                         [
-                            [a = "", validity = false],
+                            [a = "Mozambic", validity = false],
                             [b = "England", validity = true],
-                            [c = "", validity = false]
+                            [c = "Qatar", validity = false]
                         ],
                         [
-                            [a = "", validity = false],
-                            [b = "", validity = false],
+                            [a = "Dubai", validity = false],
+                            [b = "Spain", validity = false],
                             [c = "India", validity = true]
                         ]
                     ]
