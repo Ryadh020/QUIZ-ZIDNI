@@ -57,6 +57,203 @@ for(let i=0; i<=5; i++) {
     languages.childNodes[i].addEventListener("change",()=> {
         switch(i) {
             case 1:
+            fields.addEventListener("change",(ev)=> {
+                if(ev.target.value === "اسلام") {
+                    console.log("اسلام"); 
+                    quiz = [
+                        [a = "اي الانبياء دعا بهذا الدعاء :لااله الا انت سبحانك اني كنت من الظالمين", number = "السؤال الاول"],
+                        [b = "ماهو صوت الحيوان الوحيد المذكور فالقرآن", number = "السؤال الثاني"],
+                        [c = 'قال الله تعالى:"ما ودعك ربك وما قلى "مامعنى ماقلى', number = "السؤال الثالث"],
+                        [d = "سورة سمعها النجاشي ملك الحبشة فاضت لها دموعه فما هي ؟", number = "السؤال الرابع"],
+                        [e = "ماعدد الايام الذي خلقت فيه الارض والسماء ؟",  number = "السؤال الخامس"],
+                        [f = "", number = "السؤال السادس"],
+                        [g = "", number = "السؤال السابع"]       
+                    ]
+                    suggestions = [
+                        [
+                            [a = "نوح ", validity = false],
+                            [b = "ادم ", validity = false],
+                            [c = "سيدنا يونس", validity = true]
+                        ],
+                        [
+                            [a = "العجل ", validity = true],
+                            [b = "الحصان ", validity = false],
+                            [c = "الخروف", validity = false]
+                        ],
+                        [
+                            [a = "ابتعد عنك", validity = false],
+                            [b = "ابغضك ", validity = true],
+                            [c = "تركك ", validity = false]
+                        ],
+                        [
+                            [a = "سورة مريم", validity = true],
+                            [b = "سورة الاخلاص", validity = false],
+                            [c = "سورة الفاتحة", validity = false]
+                        ],
+                        [
+                            [a = " سبعة ايام", validity = false],
+                            [b = " عشرة ايام", validity = false],
+                            [c = " سته ايام", validity = true]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = true],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ]
+                    ]
+                }else if(ev.target.value === "جغرافيا") {
+                    console.log("جغرافيا"); 
+                    quiz = [
+                        [a = "ماذا اطلق العثمانيون على الجزائر العاصمة ", number = "السؤال الاول"],
+                        [b = "اين يوجد مقر منظمة الاتحاد الافريقي", number = "السؤال الثاني"],
+                        [c =  "من هي الدوله الوحيدة في العالم التي ليس لديها جيش ؟", number = "السؤال الثالث"],
+                        [d = "ماهو النهر الوحيد في العالم ينبع من الجنوب إلى الشمال ؟", number = "السؤال الرابع"],
+                        [e = "", number = "السؤال الخامس"],
+                        [f = "", number = "السؤال السادس"],
+                        [g = "", number = "السؤال السابع"]       
+                    ]
+                    suggestions = [
+                        [
+                            [a = "لمحفوظة بالله ", validity = false],
+                            [b = " المحمية بالل", validity = false],
+                            [c = "المحروسة بعناية الله ", validity = true]
+                        ],
+                        [
+                            [a = "اديس ابابا ", validity = true],
+                            [b = "القاهرة ", validity = false],
+                            [c = "الجزائر ", validity = false]
+                        ],
+                        [
+                            [a = "سويسرا", validity = true],
+                            [b = "كندا ", validity = false],
+                            [c = "السودان ", validity = false]
+                        ],
+                        [
+                            [a = "الدانوب", validity = false],
+                            [b = "النيل ", validity = true],
+                            [c = "الامازون", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = false],
+                            [c = "", validity = true]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = true],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ]
+                    ]
+                }else if(ev.target.value === "تاريخ") {
+                    console.log("تاريخ"); 
+                    quiz = [
+                        [a = "ما هي السورة التي افتتح بها الاذاعة السرية الجزائرية 16 ديسمبر 1956", number = "السؤال الاول"],
+                        [b = 'من هو الشهيد الذي كان الاستعمار يسميه "ذو العشرين هوية"', number = "السؤال الثاني"],
+                        [c = "ما هي كلمة السر التي اتفق عليها القادة لاعلان اندلاع الثورة ", number = "السؤال الثالث"],
+                        [d = "ما هي اضخم موسوعة في التاريخ كتبها شخص واحد بيده", number = "السؤال الرابع"],
+                        [e = "دخل كتاب غينيس موسوعة الارقام القياسية لكونه", number = "السؤال الخامس"],
+                        [f = "", number = "السؤال السادس"],
+                        [g = "", number = "السؤال السابع"]       
+                    ]
+                    suggestions = [
+                        [
+                            [a = "سورة الفتح", validity = false],
+                            [b = "سورة النصر", validity = false],
+                            [c = "سورة الملك", validity = true]
+                        ],
+                        [
+                            [a = "العربي بن مهيدي", validity = true],
+                            [b = "مصطفى بن بولعيد", validity = false],
+                            [c = "بد الرحمن ميرة", validity = false]
+                        ],
+                        [
+                            [a = "محمد وابو بكر", validity = false],
+                            [b = "خالد و عقبة", validity = true],
+                            [c = "وعقدنا العزم", validity = false]
+                        ],
+                        [
+                            [a = "كتاب الشفاء لابن سينا", validity = true],
+                            [b = "موسوعة المعارف البريطانية ", validity = false],
+                            [c = "الموسوعة الفرنسية", validity = false]
+                        ],
+                        [
+                            [a = "الاكثر مبيعا", validity = false],
+                            [b = "الاكثر سرقة من المكتبات امريكا", validity = true],
+                            [c = "الكتاب الاكثر مقروئية", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = true],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ]
+                    ]
+                }else if(ev.target.value === "اسلام") {
+                    console.log("اسلام"); 
+                    quiz = [
+                        [a = "", number = "السؤال الاول"],
+                        [b = "", number = "السؤال الثاني"],
+                        [c = "", number = "السؤال الثالث"],
+                        [d = "", number = "السؤال الرابع"],
+                        [e = "", number = "السؤال الخامس"],
+                        [f = "", number = "السؤال السادس"],
+                        [g = "", number = "السؤال السابع"]       
+                    ]
+                    suggestions = [
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = false],
+                            [c = "", validity = true]
+                        ],
+                        [
+                            [a = "", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = true],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = false],
+                            [c = "", validity = true]
+                        ],
+                        [
+                            [a = "", validity = false],
+                            [b = "", validity = true],
+                            [c = "", validity = false]
+                        ],
+                        [
+                            [a = "", validity = true],
+                            [b = "", validity = false],
+                            [c = "", validity = false]
+                        ]
+                    ]
+                }
+            });
+
+
             console.log("arabic");
             quiz = [
                 [a = "سورة سمعها النجاشي ملك الحبشة فاضت لها دموعه فما هي ؟", number = "السؤال الاول"],
@@ -64,8 +261,8 @@ for(let i=0; i<=5; i++) {
                 [c = "من هي الدوله الوحيدة في العالم التي ليس لديها جيش ؟", number = "السؤال الثالث"],
                 [d = "من هو مخترع الطائرة ذات المحرك ؟", number = "السؤال الرابع"],
                 [e = "ماعدد الايام الذي خلقت فيه الارض والسماء ؟", number = "السؤال الخامس"],
-                [f = "ماهو النهر الوحيد في العالم ينبع من الجنوب إلى الشمال ؟", number = "السؤال السابع"],
-                [g = "ماهو علم السيتولوجيا ؟", number = "السؤال الثامن"]       
+                [f = "ماهو النهر الوحيد في العالم ينبع من الجنوب إلى الشمال ؟", number = "السؤال السادس"],
+                [g = "ماهو علم السيتولوجيا ؟", number = "السؤال السابع"]       
             ]
             suggestions = [
                 [
@@ -107,21 +304,42 @@ for(let i=0; i<=5; i++) {
             break;
 
             case 3:
+            fields.addEventListener("change",(ev)=> {
+                if(ev.target.value === "الرياضة") {
+                    console.log("الرياضة"); 
+                }else if(ev.target.value === "جغرافيا") {
+                    console.log("جغرافيا"); 
+                }else if(ev.target.value === "تاريخ") {
+                    console.log("تاريخ"); 
+                }else if(ev.target.value === "اسلام") {
+                    console.log("اسلام"); 
+                }
+            });
             alert("this language is not added yet");
             console.log("french");
             quiz = [
-                [a = "", number = ""],
-                [b = "", number = ""],
-                [c = "", number = ""],
-                [d = "", number = ""],
-                [e = "", number = ""],
-                [f = "", number = ""],
-                [g = "", number = ""]       
+                [a = "", number = "السؤال الاول"],
+                [b = "", number = "السؤال الثاني"],
+                [c = "", number = "السؤال الثالث"],
+                [d = "", number = "السؤال الرابع"],
+                [e = "", number = "السؤال الخامس"],
+                [f = "", number = "السؤال السادس"],
+                [g = "", number = "السؤال السابع"]       
             ]
             suggestions = [
                 [
+                    [a = "", validity = false],
+                    [b = "", validity = false],
+                    [c = "", validity = true]
+                ],
+                [
                     [a = "", validity = true],
                     [b = "", validity = false],
+                    [c = "", validity = false]
+                ],
+                [
+                    [a = "", validity = false],
+                    [b = "", validity = true],
                     [c = "", validity = false]
                 ],
                 [
@@ -130,23 +348,13 @@ for(let i=0; i<=5; i++) {
                     [c = "", validity = false]
                 ],
                 [
-                    [a = "", validity = true],
+                    [a = "", validity = false],
                     [b = "", validity = false],
-                    [c = "", validity = false]
+                    [c = "", validity = true]
                 ],
                 [
-                    [a = "", validity = true],
-                    [b = "", validity = false],
-                    [c = "", validity = false]
-                ],
-                [
-                    [a = "", validity = true],
-                    [b = "", validity = false],
-                    [c = "", validity = false]
-                ],
-                [
-                    [a = "", validity = true],
-                    [b = "", validity = false],
+                    [a = "", validity = false],
+                    [b = "", validity = true],
                     [c = "", validity = false]
                 ],
                 [
